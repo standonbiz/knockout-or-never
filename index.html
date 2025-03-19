@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Knock Out</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+    <h1>Play 2D Knock Out</h1>
+    <div id="game-container">
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                let ruffle = window.RufflePlayer.newest();
+                let player = ruffle.createPlayer();
+                player.load("2d_knock_out.swf");
+                document.getElementById("game-container").appendChild(player);
+            });
+        </script>
+    </div>
+</body>
+</html>
